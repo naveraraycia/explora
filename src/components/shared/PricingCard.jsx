@@ -49,9 +49,6 @@ function onClick(){
 }
 
 
-
-
-
   return (
     <div className={`${color === 'brown' ? 'bg-[rgba(176,145,137,0.7)]' : color === 'blue' ? 'bg-[rgba(153,184,191,0.7)]' : color === 'dark blue' ? 'bg-[rgba(133,158,177,0.5)]' : ''} p-10 rounded-lg flex-1 md:p-20`}>
       <div className="flex flex-col space-y-5">

@@ -23,12 +23,12 @@ function ForgotPassword() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-    <div className="relative flex flex-col m-6 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0">
+    <div className="flex items-center justify-center min-h-screen md:p-10">
+    <div className="relative flex flex-col bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0">
   
       <form onSubmit={onSubmit}>
 
-      <div className="p-10 md:p-20">
+      <div className="p-5 md:p-20">
         <h1 className="font-sans font-bold text-gray text-4xl mb-5 md:text-center">Forgot Password</h1>
         <p className="font-sans font-regular mb-2 text-gray tracking-wider max-w-md md:text-center">Enter your email and we'll send you a link for resetting your password.</p>
         <p className="font-sans text-orange-500 font-regular text-xs mb-5 tracking-wider max-w-md leading-5 md:text-center">Password reset emails go right into your spam folder. Make sure to check it out.</p>

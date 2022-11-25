@@ -158,7 +158,7 @@ function BookingItem({ booking, id }) {
 
     {showModal &&
      (
-    <div id="review" className="close-modal fixed items-center p-20 justify-center w-full h-screen bg-[rgba(0,0,0,0.2)] top-0 left-0 right-0 bottom-0 " onClick={closeOnBackground}>
+    <div id="review" className="close-modal fixed items-center py-20 px-5 justify-center w-full h-screen bg-[rgba(0,0,0,0.2)] top-0 left-0 right-0 bottom-0 " onClick={closeOnBackground}>
     <div className="p-10  bg-white text-gray items-center justify-center max-w-3xl mx-auto flex flex-col space-y-8 rounded-lg md:p-20">
         <h1 className="font-sans font-bold text-xl md:text-3xl">Write your review</h1>
         <p className="font-sans text-sm tracking-wide text-md max-w-xs leading-6 md:text-lg">Let people know how much you enjoyed your <span className='font-bold'>{booking.location}</span> trip!</p>
