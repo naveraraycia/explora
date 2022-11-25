@@ -45,9 +45,9 @@ function LogIn() {
 
   return (
     <div className="flex items-center justify-center min-h-screen md:p-10">
-    <div className="relative flex flex-col m-6 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0">
+    <div className="relative flex flex-col bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0">
 
-      <div className="p-10 md:p-20">
+      <div className="p-5 md:p-20">
         <h1 className="font-sans font-bold text-gray text-4xl mb-5">Log In</h1>
 
         <p className="font-sans font-regular mb-5 text-gray tracking-wider leading-8">Log in to your account to book with Explora!</p>

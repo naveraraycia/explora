@@ -21,7 +21,7 @@ function TestimonialOverall({bgImg, commentData}) {
       backgroundImage: `url(${bgImg})`
     }}>
 
-      <div className="container flex-col flex max-w-6xl mx-auto px-10 justify-center items-center py-12 z-10">
+      <div className="container flex-col flex max-w-6xl mx-auto px-5 justify-center items-center py-12 z-10">
 
           {/* Gradient Overlay - bottom */}
           <div className="gradient-overlay-2">

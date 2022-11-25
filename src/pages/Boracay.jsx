@@ -101,18 +101,18 @@ function Boracay() {
       </Slider>
       </div>
 
-      <div className="container flex-col flex max-w-6xl mx-auto px-10 z-10 md:flex-row md:mt-10">
+      <div className="container flex-col flex max-w-6xl mx-auto px-5 z-10 md:flex-row md:mt-10">
         <Feature smallTitle='one of the best' bigTitle='beach escapade' subTitle='The all time favorite of beach enthusiasts around the world.' featureImg={featureImg} />
 
       </div>
       
       <section id="tour-packages">
 
-        <div className="container flex flex-col space-y-10 items-start mt-32 text-white max-w-6xl px-10 mx-auto">
+        <div className="container flex flex-col space-y-10 items-start mt-32 text-white max-w-6xl px-5 mx-auto">
 
           <div className="mx-auto flex flex-col text-center items-center">
-            <h2 className="text-2xl font-sans font-normal tracking-widest uppercase md:text-3xl">things to do</h2>
-            <h1 className='text-5xl mt-3 font-sans font-black uppercase md:mt-0'>Boracay tour packages</h1>
+            <h2 className="text-xl font-sans font-normal tracking-widest uppercase md:text-3xl">things to do</h2>
+            <h1 className='text-3xl mt-3 font-sans font-black uppercase md:mt-0 md:text-5xl'>Boracay tour packages</h1>
           </div>
 
           <div className="flex flex-col w-full justify-between">
@@ -128,8 +128,8 @@ function Boracay() {
         
           <div className="max-w-6xl w-full flex flex-col items-start text-white">
             <div>
-              <h2 className="text-2xl font-sans font-normal tracking-widest uppercase text-left md:text-2xl">hotel room package</h2>
-              <h1 className='text-5xl mt-3 font-sans font-black text-white uppercase md:text-5xl'>a cozy place to stay</h1>
+              <h2 className="text-2xl font-sans font-normal tracking-widest uppercase text-left">hotel room package</h2>
+              <h1 className='text-3xl font-sans font-black text-white uppercase md:text-5xl'>a cozy place to stay</h1>
 
               <p className="font-serif tracking-wider text-xl leading-7 text-white my-5 max-w-4xl mt-5">From amazing tour packages, Explora will also accomodate your hotel needs offering you the best and premium rooms in Bohol Province.</p>
             </div>
@@ -151,20 +151,20 @@ function Boracay() {
         <section id="purchase-section" className="mt-20">
           <PurchaseHeader bgImg={purchaseHeader} />
 
-          <div className="relative px-10 py-20 md:px-20">
+          <div className="relative px-5 py-20 md:px-20">
    
               
               <div className="flex space-y-10 flex-col md:flex-row items-center justify-around md:space-y-0 md:space-x-10">
 
-                <div className="flex md:hover:scale-110 hover:shadow-lg hover:cursor-pointer">
+                <div className="md:hover:scale-110 hover:shadow-lg hover:cursor-pointer">
                   <PricingCard color='dark blue' location='Boracay' promo='basic' price={1299} deals={['Choose ANY 1 from the tour packages (tour guide included)', 'Free Hotel Reservation for 5 days', 'Round trip flight accomodation']} />
                 </div>
 
-                <div className="flex md:hover:scale-110 hover:shadow-lg hover:cursor-pointer">
+                <div className="md:hover:scale-110 hover:shadow-lg hover:cursor-pointer">
                   <PricingCard color='dark blue' location='Boracay' promo='premium' price={2299} deals={['Avail ALL the tour packages (tour guide included)', 'Free Hotel Reservation for 7 days', 'Round trip flight accomodation']} />
                 </div>
 
-                <div className="flex md:hover:scale-110 hover:shadow-lg hover:cursor-pointer">
+                <div className="md:hover:scale-110 hover:shadow-lg hover:cursor-pointer">
                   <PricingCard color='dark blue' location='Boracay' promo='leveled up' price={1599} deals={['Choose ANY 2 from the tour packages (tour guide included)', 'Free Hotel Reservation for 6 days', 'Round trip flight accomodation']} />
                 </div>
               </div>
@@ -177,8 +177,8 @@ function Boracay() {
 
       <div className="container flex flex-col space-y-10 items-start mb-32 mt-20 text-white max-w-6xl p-10 mx-auto">
       <div className="mx-auto flex flex-col text-center items-center space-y-3">
-              <h2 className="text-xl font-sans font-bold tracking-widest md:text-3xl">What are you waiting for?</h2>
-              <h1 className='text-md mt-3 font-sans tracking-wide uppercase md:mt-0 md:text-2xl'>let's go travel with explora</h1>
+              <h2 className="text-md font-sans font-bold tracking-widest md:text-3xl">What are you waiting for?</h2>
+              <h1 className='text-md font-sans tracking-wide uppercase md:mt-0 md:text-2xl'>let's go travel with explora</h1>
         </div>
       </div>
 

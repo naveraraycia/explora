@@ -125,12 +125,12 @@ function EditProfile() {
       <div className="bg-cover bg-center w-full h-[300px]" style={{
         backgroundImage: `url(${headerImg})`
       }}>
-        <div className="container flex-col flex max-w-6xl mx-auto px-10 py-12">
+        <div className="container flex-col flex max-w-6xl mx-auto px-5 py-12">
           <Navbar />    
         </div>
       </div>
 
-      <div className="container space-y-5 max-w-6xl mx-auto px-10 py-12 md:space-y-0">
+      <div className="container space-y-5 max-w-6xl mx-auto px-5 py-12 md:space-y-0">
         <form className='flex flex-col space-y-10 md:flex-row md:space-y-0 md:space-x-10 '>
         <div className="flex-col items-center flex space-y-5 sm:inline-flex sm:items-start md:items-center">
           <img src={defaultPhoto} alt="profile" className='rounded-lg border-4 border-white w-[200px] h-[200px]' />
@@ -167,7 +167,7 @@ function EditProfile() {
       
     <footer className='bg-blueGreen mt-20'>
      
-     <div className='flex flex-col py-10 px-20  space-y-4 items-center justify-end md:justify-between md:items-end md:flex-row md:p-20 md:py-10'>
+     <div className='flex flex-col py-10 px-5  space-y-4 items-center justify-end md:justify-between md:items-end md:flex-row md:p-20 md:py-10'>
 
       <div className="flex space-x-4">
         <a href='https://www.facebook.com/' target={'_blank'} rel='noreferrer'>

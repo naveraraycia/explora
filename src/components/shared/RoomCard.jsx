@@ -7,7 +7,7 @@ function RoomCard({color, cardImg, title, caption}) {
         backgroundImage: `url(${cardImg})`
       }}></div>
 
-      <div className={`${color === 'brown' ? 'bg-[#42332F]' : color === 'blue' ? 'bg-[#31606B]' : color === 'dark blue' ? 'bg-[#122C40]' : ''} space-y-3 rounded-b-lg p-10 flex flex-1 flex-col w-full`}>
+      <div className={`${color === 'brown' ? 'bg-[#42332F]' : color === 'blue' ? 'bg-[#31606B]' : color === 'dark blue' ? 'bg-[#122C40]' : ''} space-y-3 rounded-b-lg p-6 flex flex-1 flex-col w-full`}>
         <h1 className={`${color === 'brown' ? 'text-[#CEBC7B]' : color === 'blue' ? 'text-[#90D3DC]' : color === 'dark blue' ? 'text-[#D28463]' : ''} font-black text-2xl capitalize font-sans`}>{title}</h1>
         <p className="font-sans text-white leading-7 text-md">{caption}</p>
         

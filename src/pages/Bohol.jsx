@@ -104,18 +104,18 @@ function Bohol() {
 
       </div>
 
-      <div className="container flex-col flex max-w-6xl mx-auto px-10 z-10 md:flex-row md:mt-10">
+      <div className="container flex-col flex max-w-6xl mx-auto px-5 z-10 md:flex-row md:mt-10">
         <Feature smallTitle='jungle greenery' bigTitle='crystal clear waters' subTitle='Be one with nature as you enjoy Bohol’s jungle and smalller islands' featureImg={featureImg} />
 
       </div>
       
       <section id="tour-packages">
 
-        <div className="container flex flex-col space-y-10 items-start mt-32 text-white max-w-6xl px-10 mx-auto">
+        <div className="container flex flex-col space-y-10 items-start mt-32 text-white max-w-6xl px-5 mx-auto">
 
           <div className="mx-auto flex flex-col text-center items-center">
-            <h2 className="text-2xl font-sans font-normal tracking-widest uppercase md:text-3xl">things to do</h2>
-            <h1 className='text-5xl mt-3 font-sans font-black uppercase md:mt-0'>Bohol tour packages</h1>
+            <h2 className="text-xl font-sans font-normal tracking-widest uppercase md:text-3xl">things to do</h2>
+            <h1 className='text-3xl font-sans font-black uppercase md:mt-0 md:text-5xl'>Bohol tour packages</h1>
           </div>
 
           <div className="flex flex-col w-full justify-between">
@@ -131,8 +131,8 @@ function Bohol() {
         
           <div className="max-w-6xl w-full flex flex-col items-start text-white">
             <div>
-              <h2 className="text-2xl font-sans font-normal tracking-widest uppercase text-left md:text-2xl">hotel room package</h2>
-              <h1 className='text-5xl mt-3 font-sans font-black text-white uppercase md:text-5xl'>a cozy place to stay</h1>
+              <h2 className="text-2xl font-sans font-normal tracking-widest uppercase text-left">hotel room package</h2>
+              <h1 className='text-3xl font-sans font-black text-white uppercase md:text-5xl'>a cozy place to stay</h1>
 
               <p className="font-serif tracking-wider text-xl leading-7 text-white my-5 max-w-4xl mt-5">From amazing tour packages, Explora will also accomodate your hotel needs offering you the best and premium rooms in Bohol Province.</p>
             </div>
@@ -154,7 +154,7 @@ function Bohol() {
         <section id="purchase-section" className="mt-20">
           <PurchaseHeader bgImg={purchaseHeader} />
 
-          <div className="relative px-10 py-20 md:px-20" style={{
+          <div className="relative px-5 py-20 md:px-20" style={{
            
           }}>
    
@@ -183,8 +183,8 @@ function Bohol() {
 
       <div className="container flex flex-col space-y-10 items-start mb-32 mt-20 text-white max-w-6xl p-10 mx-auto">
       <div className="mx-auto flex flex-col text-center items-center space-y-3">
-              <h2 className="text-xl font-sans font-bold tracking-widest md:text-3xl">What are you waiting for?</h2>
-              <h1 className='text-md mt-3 font-sans tracking-wide uppercase md:mt-0 md:text-2xl'>let's go travel with explora</h1>
+              <h2 className="text-md font-sans font-bold tracking-widest md:text-3xl">What are you waiting for?</h2>
+              <h1 className='text-md font-sans tracking-wide uppercase mt-0 md:text-2xl'>let's go travel with explora</h1>
         </div>
       </div>
 

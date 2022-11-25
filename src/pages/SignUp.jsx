@@ -61,10 +61,10 @@ function SignUp() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen md:p-5">
-    <div className="relative flex flex-col m-6 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0">
+    <div className="flex items-center justify-center min-h-screen md:p-10">
+    <div className="relative flex flex-col bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0">
 
-      <div className="order-2 p-10 md:p-20">
+      <div className="order-2 p-5 md:p-20">
         <h1 className="font-sans font-bold text-gray text-4xl mb-5">Sign Up</h1>
         <p className="font-sans font-regular mb-5 text-gray tracking-wider leading-8">Create an account to start your awesome adventures!</p>
 

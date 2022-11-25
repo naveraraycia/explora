@@ -4,7 +4,7 @@ function CardIcon({children, bgColor, inherit}) {
   return (
     <div className={`${bgColor === 'sand' ? 'bg-[#EDE4D7]':
     bgColor === 'brown' ? 'bg-[#42332F]' 
-    : bgColor === 'blue green' ? 'bg-blueGreen' : bgColor === 'dark blue green' ? 'bg-[#122C40]': bgColor === 'dark blue' ? 'bg-[#31606B]' : ''} p-10 space-y-2 flex-1 flex-col justify-center items-center text-center rounded-lg`} style={{
+    : bgColor === 'blue green' ? 'bg-blueGreen' : bgColor === 'dark blue green' ? 'bg-[#122C40]': bgColor === 'dark blue' ? 'bg-[#31606B]' : ''} p-5 space-y-2 flex-1 flex-col justify-center items-center text-center rounded-lg`} style={{
       height: `${inherit ? 'inherit' : 'auto'}`
     }}>{children}</div>
   )

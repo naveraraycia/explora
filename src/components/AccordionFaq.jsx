@@ -2,7 +2,7 @@ import AccordionTab from "./AccordionTab"
 
 function AccordionFaq() {
   return (
-    <div className="container mx-auto px-6 mb-32">
+    <div className="container mx-auto px-2 mb-32">
     <div className="max-w-2xl mx-auto m-8 overflow-hidden">
       <AccordionTab tabIndex={1} question='How do we know if there are deals?' answer='Explora updates the purchasing sections every time there are deals.' />
 

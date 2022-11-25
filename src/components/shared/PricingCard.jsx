@@ -53,12 +53,12 @@ function onClick(){
 
 
   return (
-    <div className={`${color === 'brown' ? 'bg-[rgba(176,145,137,0.7)]' : color === 'blue' ? 'bg-[rgba(153,184,191,0.7)]' : color === 'dark blue' ? 'bg-[rgba(133,158,177,0.5)]' : ''} p-20 rounded-lg flex-1`}>
+    <div className={`${color === 'brown' ? 'bg-[rgba(176,145,137,0.7)]' : color === 'blue' ? 'bg-[rgba(153,184,191,0.7)]' : color === 'dark blue' ? 'bg-[rgba(133,158,177,0.5)]' : ''} p-10 rounded-lg flex-1 md:p-20`}>
       <div className="flex flex-col space-y-5">
-        <h1 className="font-sans mx-auto text-center text-white uppercase text-2xl tracking-wide">{promo}</h1>
-        <div className="flex items-center mx-auto">
-          <FaDollarSign className={`${color === 'brown' ? 'text-[#774C35]' : color === 'blue' ? 'text-[#266A73]' : color === 'dark blue' ? 'text-[#1A4869]': ''} flex-none text-4xl `} />
-          <p className="font-black font-sans text-6xl text-white">{price}</p>
+        <h1 className="font-sans mx-auto text-center text-white uppercase text-xl tracking-wide md:text-2xl">{promo}</h1>
+        <div className="flex items-center justify-center mx-auto">
+          <FaDollarSign className={`${color === 'brown' ? 'text-[#774C35]' : color === 'blue' ? 'text-[#266A73]' : color === 'dark blue' ? 'text-[#1A4869]': ''} flex-none text-2xl md:text-4xl `} />
+          <p className="font-black font-sans text-4xl text-white md:text-6xl">{price}</p>
         </div>
 
         <div className="flex flex-col space-y-3">

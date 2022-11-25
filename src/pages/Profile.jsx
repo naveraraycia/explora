@@ -66,13 +66,13 @@ function Profile() {
       <div className="bg-cover bg-center w-full h-[300px]" style={{
         backgroundImage: `url(${headerImg})`
       }}>
-        <div className="container flex-col flex max-w-6xl mx-auto px-10 py-12">
+        <div className="container flex-col flex max-w-6xl mx-auto px-5 py-12">
           <Navbar />    
         </div>
       </div>
 
 
-      <div className="container space-y-5 columns-xs max-w-6xl mx-auto gap-0 px-10 py-12 md:space-y-0">
+      <div className="container space-y-5 columns-xs max-w-6xl mx-auto gap-0 px-5 py-12 md:space-y-0">
 
         <div className="-mt-32 flex-col items-center flex space-y-5 sm:inline-flex sm:items-start md:items-center">
             <img src={profilePic} alt="profile" className='rounded-lg border-4 border-white w-[200px] h-[200px]' />
@@ -91,7 +91,7 @@ function Profile() {
     </section>
 
     <section id="bookings">
-      <div className="container flex flex-col space-y-10 max-w-6xl mx-auto gap-0 px-10 py-12 ">
+      <div className="container flex flex-col space-y-10 max-w-6xl mx-auto gap-0 px-5 py-12 ">
         <h1 className="font-sans font-bold text-center text-gray text-xl capitalize sm:text-left">Your Bookings</h1>
         
         <div className="flex flex-col">
@@ -114,7 +114,7 @@ function Profile() {
 
     <footer className='bg-blueGreen mt-20'>
      
-     <div className='flex flex-col py-10 px-20  space-y-4 items-center justify-end md:justify-between md:items-end md:flex-row md:p-20 md:py-10'>
+     <div className='flex flex-col py-10 px-5  space-y-4 items-center justify-end md:justify-between md:items-end md:flex-row md:p-20 md:py-10'>
 
       <div className="flex space-x-4">
         <a href='https://www.facebook.com/' target={'_blank'} rel='noreferrer'>

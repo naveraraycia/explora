@@ -11,10 +11,9 @@ function ContactUs() {
     <div className="flex flex-col justify-between space-y-20">
     <AboutHeader headerBg={contactPic} smallTitle='get in touch' bigTitle='contact us' />
 
-    <div className="flex flex-col container max-w-6xl mx-auto space-x-0 space-y-5 items-center md:flex-row md:space-x-10 md:space-y-0 px-10">
+    <div className="flex flex-col container max-w-6xl mx-auto space-x-0 space-y-5 items-center md:flex-row md:space-x-10 md:space-y-0 px-5">
 
       <div className="w-full">
-
       <ContactForm />
       </div>
 

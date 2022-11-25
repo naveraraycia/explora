@@ -17,7 +17,7 @@ fullDate = `${month}-${day}-${year}`
 
 
   return (
-    <div className="container h-full mx-auto px-10 md:pl-10 py-20">
+    <div className="container h-full mx-auto px-5 md:pl-10 py-20">
 
           <CardIcon inherit={true} bgColor={data.location === 'Bohol' ? 'brown' : data.location === 'Palawan' ? 'dark blue' : data.location === 'Boracay' ? 'dark blue green' : 'sand'}>
           <div className="flex flex-col space-y-5 font-sans justify-between" style={{

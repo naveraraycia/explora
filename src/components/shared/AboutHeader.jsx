@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 function AboutHeader({headerBg, smallTitle, bigTitle}) {
   return (
-    <section id='hero' className='relative h-[400px] md:h-[500px]' style={{
+    <section id='hero' className='relative h-[350px] md:h-[500px]' style={{
       backgroundImage: `url(${headerBg})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
@@ -17,8 +17,8 @@ function AboutHeader({headerBg, smallTitle, bigTitle}) {
         <Navbar />
       
         <div className="max-w-6xl flex flex-col items-center mt-20 text-white md:mt-32 md:items-start">
-          <h2 className="text-2xl font-sans text-center font-normal tracking-widest uppercase md:text-left md:text-3xl">{smallTitle}</h2>
-          <h1 className='text-5xl text-center mt-3 font-sans font-black uppercase md:text-7xl md:text-left md:mt-0'>{bigTitle}</h1>
+          <h2 className="text-xl font-sans text-center font-normal tracking-widest uppercase md:text-left md:text-3xl">{smallTitle}</h2>
+          <h1 className='text-4xl text-center font-sans font-black uppercase md:text-7xl md:text-left md:mt-0'>{bigTitle}</h1>
           
         </div>
 

@@ -5,7 +5,7 @@ function Button({ children, color, type, btnBlock}) {
   return (
     <>
 
-      <button className={`py-6 px-12 w-full 
+      <button className={`py-6 px-5 w-full md:px-12 
       ${color === 'brown' ? 'bg-[#7D5B51] hover:bg-[#56382F]': color === 'blue' ? 'bg-blueGreen hover:bg-darkBlueGreen' : color === 'dark blue' ? 'bg-[#1A4869] hover:bg-[#1A384F]' : 'bg-blueGreen hover:bg-darkBlueGreen'} 
       
       rounded-lg text-white font-semibold font-sans tracking-widest transition hover:md:-translate-y-1 duration-150 hover:shadow-lg 

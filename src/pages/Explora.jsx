@@ -46,11 +46,11 @@ function Explora() {
     <>
     <Header headerBg={heroPic} btnColor='blue' btnRedirect='popular-destinations' smallTitle='discover' bigTitle='the Philippines' description={`We make it easy for you to find and book tours in the Philippines. We offer tours from Bohol to Boracay and Palawan. Book now!`} />
     <section id="why-explora" className="mt-10">
-    <div className="container flex-col flex max-w-6xl mx-auto px-10 py-12 z-10 md:flex-row">
+    <div className="container flex-col flex max-w-6xl mx-auto px-5 py-12 z-10 md:flex-row">
       {/* left col */}
       <div className=" flex flex-col items-center mt-20 text-gray md:max-w-6xl md:mx-auto md:items-center md:text-center md:mt-0">
           <h2 className="text-2xl font-sans text-center font-normal tracking-widest uppercase md:text-left md:text-3xl">Why</h2>
-          <h1 className='text-5xl text-center mt-3 font-sans font-black text-blueGreen uppercase  md:text-left md:mt-0'>explora</h1>
+          <h1 className='text-5xl text-center font-sans font-black text-blueGreen uppercase  md:text-left md:mt-0'>explora</h1>
           <p className="font-sans text-center tracking-wider leading-8 my-5 max-w-3xl md:text-center">Explora levels up your travel experience by helping you plan, book, and organize your itinerary to make the most out of your adventures.</p>
 
         </div>
@@ -59,7 +59,7 @@ function Explora() {
     </section>
 
     <section id="cards" className="mb-10">
-      <div className="container max-w-6xl mx-auto px-10 py-12 z-10">
+      <div className="container max-w-6xl mx-auto px-5 py-12 z-10">
         <CardSet cardContent={[
           {
             title: 'Fly Fast',
@@ -81,10 +81,10 @@ function Explora() {
     </section>
 
     <section id="popular-destinations" className="pb-32">
-      <div className="container max-w-6xl mx-auto px-10 py-12 z-10">
+      <div className="container max-w-6xl mx-auto px-5 py-12 z-10">
         <div className="flex flex-col text-gray">
-        <h2 className="text-2xl font-sans text-center font-normal tracking-widest uppercase md:text-3xl">our popular</h2>
-          <h1 className='text-5xl text-center mt-3 font-sans font-black text-blueGreen uppercase  md:mt-0'>Destinations</h1>
+        <h2 className="text-xl font-sans text-center font-normal tracking-widest uppercase md:text-3xl">our popular</h2>
+          <h1 className='text-3xl text-center font-sans font-black text-blueGreen uppercase md:mt-0 md:text-5xl'>Destinations</h1>
         </div>
 
         <div className="flex-col mt-10 flex justify-between space-y-10 md:flex-row md:space-x-10 md:space-y-0">
@@ -102,7 +102,7 @@ function Explora() {
     )}
 
     <section id="faq" className="md:pb-10">
-    <div className="container flex-col flex max-w-6xl mx-auto px-10 justify-center items-center py-12 z-10">
+    <div className="container flex-col flex max-w-6xl mx-auto px-5 justify-center items-center py-12 z-10">
 
     <div className="flex flex-col space-y-4">
     <h1 className="font-sans font-bold tracking-wide text-center text-[#076976] text-3xl">Here are some of the <span className="text-blueGreen">FAQs</span></h1>
