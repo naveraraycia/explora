@@ -30,7 +30,8 @@ function ForgotPassword() {
 
       <div className="p-10 md:p-20">
         <h1 className="font-sans font-bold text-gray text-4xl mb-5 md:text-center">Forgot Password</h1>
-        <p className="font-sans font-regular mb-5 text-gray tracking-wider max-w-md leading-8 md:text-center">Enter your email and we'll send you a link for resetting your password.</p>
+        <p className="font-sans font-regular mb-2 text-gray tracking-wider max-w-md md:text-center">Enter your email and we'll send you a link for resetting your password.</p>
+        <p className="font-sans text-orange-500 font-regular text-xs mb-5 tracking-wider max-w-md leading-5 md:text-center">Password reset emails go right into your spam folder. Make sure to check it out.</p>
 
         <div className="max-w-md">
         <input type="email" className="rounded-lg border border-lightGray mb-5 w-full text-gray p-5 placeholder:font-sans placeholder:font-normal focus:outline-none" placeholder="Email" id='email' value={email} onChange={onChange} />
