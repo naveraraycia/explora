@@ -24,7 +24,7 @@ function ForgotPassword() {
 
   return (
     <div className="flex items-center justify-center min-h-screen md:p-10">
-    <div className="relative h-screen flex flex-col bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:m-0 md:h-auto md:shadow-2xl">
+    <div className="relative h-screen flex flex-col bg-white rounded-2xl md:flex-row md:space-y-0 md:m-0 md:h-auto md:shadow-2xl">
   
       <form onSubmit={onSubmit}>
 
