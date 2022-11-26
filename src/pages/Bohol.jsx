@@ -160,7 +160,7 @@ function Bohol() {
               <div className="flex flex-col xl:block xl:columns-3 space-y-20 xl:space-y-0 xl:gap-12">
               {/* <div className="flex space-y-10 flex-col md:flex-row items-center justify-around md:space-y-0 md:space-x-10"> */}
 
-                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full ">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full w-full ">
                   <PricingCard color='brown' location='Bohol' promo='basic' price={699} deals={['Choose ANY 1 from the tour packages (tour guide included)', 'Free Hotel Reservation for 5 days', 'Round trip flight accomodation']} />
                 </div>
 

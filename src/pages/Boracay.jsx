@@ -153,18 +153,16 @@ function Boracay() {
 
           <div className="relative px-5 py-20 md:px-20">
    
-              
-              <div className="flex space-y-10 flex-col md:flex-row items-center justify-around md:space-y-0 md:space-x-10">
-
-                <div className="md:hover:scale-110 hover:shadow-lg hover:cursor-pointer">
+          <div className="flex flex-col xl:block xl:columns-3 space-y-20 xl:space-y-0 xl:gap-12">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full w-full">
                   <PricingCard color='dark blue' location='Boracay' promo='basic' price={1299} deals={['Choose ANY 1 from the tour packages (tour guide included)', 'Free Hotel Reservation for 5 days', 'Round trip flight accomodation']} />
                 </div>
 
-                <div className="md:hover:scale-110 hover:shadow-lg hover:cursor-pointer">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full w-full">
                   <PricingCard color='dark blue' location='Boracay' promo='premium' price={2299} deals={['Avail ALL the tour packages (tour guide included)', 'Free Hotel Reservation for 7 days', 'Round trip flight accomodation']} />
                 </div>
 
-                <div className="md:hover:scale-110 hover:shadow-lg hover:cursor-pointer">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full w-full">
                   <PricingCard color='dark blue' location='Boracay' promo='leveled up' price={1599} deals={['Choose ANY 2 from the tour packages (tour guide included)', 'Free Hotel Reservation for 6 days', 'Round trip flight accomodation']} />
                 </div>
               </div>
