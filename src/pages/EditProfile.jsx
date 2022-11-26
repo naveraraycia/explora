@@ -143,7 +143,7 @@ function EditProfile() {
             hover:file:bg-slate-200 hover:cursor-pointer
             " onChange={onFileUpload}/>
           </label>
-          <p className="font-sans text-md font-semibold text-blueGreen hover:text-darkBlueGreen hover:cursor-pointer" onClick={()=> onSubmitImage()}>Save Photo</p>
+          <p className="font-sans text-md font-semibold w-fit text-blueGreen hover:text-darkBlueGreen hover:cursor-pointer" onClick={()=> onSubmitImage()}>Save Photo</p>
             
         </div>
 
@@ -158,7 +158,7 @@ function EditProfile() {
             <input type="email" className="rounded-lg bg-white p-4 text-gray text-md placeholder:text-md placeholder:text-lightGray placeholder:font-sans focus:outline-none" placeholder={email} value={email} onChange={onChange} id="email" />
           </div>
 
-          <p className="font-sans text-md font-semibold text-blueGreen hover:text-darkBlueGreen hover:cursor-pointer" onClick={()=> onSubmit()}>Save Changes</p>
+          <p className="font-sans text-md font-semibold w-fit text-blueGreen hover:text-darkBlueGreen hover:cursor-pointer" onClick={()=> onSubmit()}>Save Changes</p>
 
         </div>
         </form>
