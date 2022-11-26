@@ -94,7 +94,7 @@ function SignUp() {
       </form>
         <div className="flex mb-5 items-center justify-between flex-col md:flex-row">
         
-          <p className=" font-sans font-normal my-5 text-center text-gray text-sm tracking-wider md:text-left">or Sign Up with</p>
+          <p className=" font-sans font-normal my-5 text-center text-gray text-sm tracking-wider md:text-left">or sign up with</p>
           
           <OAuth />
         </div>

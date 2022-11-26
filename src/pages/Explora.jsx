@@ -69,12 +69,12 @@ function Explora() {
           {
               title: 'Best Deals',
               description: `Allow us to find you the cheapest flights, so you don't have to do all the research.`,
-              icon: 'FaThumbsUp'
+              icon: 'FaTag'
           },
           {
             title: 'Satisfactory',
             description: 'We make sure to provide satisfactory services to make your adventures unforgettably amazing!',
-            icon: 'FaTag'
+            icon: 'FaThumbsUp'
           }
         ]} />
       </div>
