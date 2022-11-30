@@ -59,7 +59,6 @@ function App() {
             <Route path='/edit-profile' element={<EditProfile />} />
           </Route>
           
-
           {/* Contact Us */}
           <Route path='/contact-us' element={<ContactUs />} />
           {/* Bohol */}
