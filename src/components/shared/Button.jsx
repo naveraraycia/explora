@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function Button({ children, color, type, btnBlock}) {
+function Button({ children, color, type, btnBlock, isDisabled}) {
 
   return (
     <>
@@ -9,7 +9,7 @@ function Button({ children, color, type, btnBlock}) {
       ${color === 'brown' ? 'bg-[#7D5B51] hover:bg-[#56382F]': color === 'blue' ? 'bg-blueGreen hover:bg-darkBlueGreen' : color === 'dark blue' ? 'bg-[#1A4869] hover:bg-[#1A384F]' : 'bg-blueGreen hover:bg-darkBlueGreen'} 
       
       rounded-lg text-white font-semibold font-sans tracking-widest transition hover:md:-translate-y-1 duration-150 hover:shadow-lg 
-      ${btnBlock ? 'md:w-full' : 'md:w-auto'}`} type={type}>{children}</button>
+      ${btnBlock ? 'md:w-full' : 'md:w-auto'}`} type={type} disabled={isDisabled} >{children}</button>
   
    
     </>
@@ -21,6 +21,7 @@ Button.defaultProps = {
   color: 'blue',
   type: 'button',
   btnBlock: false,
+  isDisabled: false
 
 }
 
@@ -30,6 +31,7 @@ Button.propTypes = {
   color: PropTypes.string,
   type: PropTypes.string,
   btnBlock: PropTypes.bool,
+  isDisabled: PropTypes.bool
 
 }
 

@@ -13,6 +13,7 @@ import Boracay from './pages/Boracay';
 import Profile from './pages/Profile';
 import ForgotPassword from './pages/ForgotPassword';
 import EditProfile from './pages/EditProfile';
+import NotFound from './pages/NotFound';
 // import private route
 import PrivateRoute from './components/PrivateRoute'
 
@@ -49,6 +50,8 @@ function App() {
           <Route path='/forgot-password' element={<ForgotPassword />} />
           {/* About Us */}
           <Route path='/about-us' element={<AboutUs />} />
+          {/* Not found page */}
+          <Route path='/*' element={<NotFound />} />
           
           {/* Profile - Private Route */}
           <Route path='/profile' element={<PrivateRoute />}>

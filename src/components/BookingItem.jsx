@@ -15,6 +15,7 @@ function BookingItem({ booking, id }) {
   const navigate = useNavigate()
 
   const [loading, setLoading] = useState(true)
+  const [disabledBtn, setDisabledBtn] = useState(false)
   const [commentPublished, setCommentPublished] = useState(false)
   const [showModal, setShowModal] = useState(null)
   const [profilePic, setProfilePic] = useState(null)
@@ -96,7 +97,12 @@ function BookingItem({ booking, id }) {
   async function onSubmit(e){
     setCommentPublished(true)
     e.preventDefault()
-    toast.success('Successfully reviewed!', {transition: Flip})
+    
+    if(commentData.text === ''){
+      toast.error('Please write a comment before publishing')
+      setCommentPublished(false)
+    } else {
+     toast.success('Successfully reviewed!', {transition: Flip})
 
   
       const commentDataCopy = {
@@ -115,14 +121,20 @@ function BookingItem({ booking, id }) {
       setLoading(false)
       navigate(0)
     
+      }
     }
 
   function onMutate(e){
     e.preventDefault()
+    if(e.target.value.length <= 5){
+      setDisabledBtn(true)
+    } else {
+      setDisabledBtn(false)
       setCommentData((prevState)=> ({
         ...prevState,
         [e.target.id]: e.target.value,
       }))
+    }
     
   }
 
@@ -166,11 +178,12 @@ function BookingItem({ booking, id }) {
         <h1 className="font-sans font-bold text-xl md:text-3xl">Write your review</h1>
         <p className="font-sans text-sm tracking-wide text-md max-w-xs leading-6 md:text-lg">Let people know how much you enjoyed your <span className='font-bold'>{booking.location}</span> trip!</p>
         <textarea id='text' name="reviewComment" typeof='text' maxLength={200} rows={6} className="rounded-lg border border-lightGray font-sans w-full text-gray text-xs placeholder:text-xs p-5 placeholder:font-sans placeholder:font-normal focus:outline-none md:placeholder:text-md md:text-md" placeholder="It was fun ..." onChange={onMutate} />
+        <p className={`text-red-400 text-sm font-sans ${disabledBtn ? 'block' : 'hidden'}`} >Please type atleast 6 characters.</p>
 
         <div className="flex flex-col w-full space-y-3">
 
           <div className={`${commentPublished ? 'pointer-events-none' : ''} w-full`} onClick={onSubmit}>
-            <Button btnBlock={true} color='blue'>PUBLISH</Button>
+            <Button btnBlock={true} isDisabled={disabledBtn} color='blue'>PUBLISH</Button>
           </div>
 
           <p className="text-sm font-sans tracking-wide text-blueGreen hover:text-darkBlueGreen mx-auto capitalize hover:cursor-pointer w-fit" onClick={closeModal} >Close</p>

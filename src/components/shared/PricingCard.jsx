@@ -72,8 +72,8 @@ function onClick(){
 
         </div>
 
-        <div className={`${clicked ? 'pointer-events-none' : ''}`} onClick={onClick} >
-        <Button color={color} btnBlock={true}>BOOK NOW</Button>
+        <div onClick={onClick} >
+        <Button color={color} isDisabled={clicked} btnBlock={true}>BOOK NOW</Button>
         </div>
       </div>
     </div>
