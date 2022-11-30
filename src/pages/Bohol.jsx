@@ -63,6 +63,7 @@ function Bohol() {
 
   const [comments, setComments] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [disabled, setDisabled] = useState(false)
 
   useEffect(()=>{
 
@@ -84,7 +85,6 @@ function Bohol() {
     
     fetchComments()
   },[])
-
 
 
   return (

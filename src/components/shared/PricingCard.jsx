@@ -12,6 +12,7 @@ import { toast, Flip } from 'react-toastify'
 function PricingCard({color, promo, price, deals, location}) {
 
   const [loading, setLoading] = useState(true)
+  const [clicked, setClicked] = useState(false)
   const auth = getAuth()
   const navigate = useNavigate()
 
@@ -19,6 +20,8 @@ function PricingCard({color, promo, price, deals, location}) {
 function onClick(){
 
   if((window.confirm('Are you sure you want to Book this trip?')) === true){
+
+    setClicked(true)
 
   if(auth.currentUser){
 
@@ -69,7 +72,7 @@ function onClick(){
 
         </div>
 
-        <div onClick={onClick} >
+        <div className={`${clicked ? 'pointer-events-none' : ''}`} onClick={onClick} >
         <Button color={color} btnBlock={true}>BOOK NOW</Button>
         </div>
       </div>

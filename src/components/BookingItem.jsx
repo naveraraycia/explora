@@ -15,6 +15,7 @@ function BookingItem({ booking, id }) {
   const navigate = useNavigate()
 
   const [loading, setLoading] = useState(true)
+  const [commentPublished, setCommentPublished] = useState(false)
   const [showModal, setShowModal] = useState(null)
   const [profilePic, setProfilePic] = useState(null)
   const isMounted = useRef(true)
@@ -93,8 +94,10 @@ function BookingItem({ booking, id }) {
   }
 
   async function onSubmit(e){
-    toast.success('Successfully reviewed!', {transition: Flip})
+    setCommentPublished(true)
     e.preventDefault()
+    toast.success('Successfully reviewed!', {transition: Flip})
+
   
       const commentDataCopy = {
         ...commentData,
@@ -166,7 +169,7 @@ function BookingItem({ booking, id }) {
 
         <div className="flex flex-col w-full space-y-3">
 
-          <div className='w-full' onClick={onSubmit}>
+          <div className={`${commentPublished ? 'pointer-events-none' : ''} w-full`} onClick={onSubmit}>
             <Button btnBlock={true} color='blue'>PUBLISH</Button>
           </div>
 

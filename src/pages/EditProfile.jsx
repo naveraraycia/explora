@@ -107,8 +107,12 @@ function EditProfile() {
   }
 
   function onSubmitImage(){
-    upload(photo, auth.currentUser, setLoading )
-    setImageSave(true)
+    if(photo !== ''){
+      upload(photo, auth.currentUser, setLoading )
+      setImageSave(true)
+    } else {
+      toast.error('You did not upload an image')
+    }
       
   }
 
@@ -141,7 +145,7 @@ function EditProfile() {
             file:text-sm file:font-semibold file:font-sans
             file:bg-white file:text-blueGreen
             hover:file:bg-slate-200 hover:cursor-pointer
-            " onChange={onFileUpload}/>
+            " onChange={onFileUpload} accept='.jpg,.png,.jpeg'/>
           </label>
           <p className="font-sans text-md font-semibold w-fit text-blueGreen hover:text-darkBlueGreen hover:cursor-pointer" onClick={()=> onSubmitImage()}>Save Photo</p>
             
