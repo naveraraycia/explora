@@ -43,9 +43,6 @@ code {
 .gradient-overlay-2 {
   @apply absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-sand;
 }
-.gradient-overlay-left {
-  @apply absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-l from-transparent to-sand;
-}
 
 .dark-overlay {
   position: absolute;
@@ -122,6 +119,7 @@ code {
   background: #fff !important;
 }
 
+/* Slick Slider classes */
 .slick-dots li.slick-active button:before {
   @apply text-darkBlueGreen;
 }
