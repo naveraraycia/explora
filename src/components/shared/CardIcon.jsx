@@ -10,6 +10,7 @@ function CardIcon({children, bgColor, inherit}) {
   )
 }
 
+
 CardIcon.defaultProps = {
   bgColor: 'sand',
   inherit: false

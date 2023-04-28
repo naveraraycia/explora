@@ -2,7 +2,8 @@ import { useState, useEffect } from "react"
 import {collection, getDocs, query, where, orderBy, limit} from 'firebase/firestore'
 import {db} from '../firebase.config'
 import Slider from "react-slick";
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import Header from "../components/shared/Header"
 import heroPic from '../assets/desktop/boracayHero.jpg'
 import CommentSet from "../components/shared/CommentSet"
@@ -152,20 +153,19 @@ function Boracay() {
           <PurchaseHeader bgImg={purchaseHeader} />
 
           <div className="relative px-5 py-20 md:px-20">
-   
-          <div className="flex flex-col xl:block xl:columns-3 space-y-20 xl:space-y-0 xl:gap-12">
-                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full w-full">
+            <div className="flex flex-col space-y-10 xl:flex-row xl:space-x-10 xl:space-y-0">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full flex flex-1 items-stretch">
                   <PricingCard color='dark blue' location='Boracay' promo='basic' price={1299} deals={['Choose ANY 1 from the tour packages (tour guide included)', 'Free Hotel Reservation for 5 days', 'Round trip flight accomodation']} />
                 </div>
 
-                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full w-full">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer flex flex-1 items-stretch">
                   <PricingCard color='dark blue' location='Boracay' promo='premium' price={2299} deals={['Avail ALL the tour packages (tour guide included)', 'Free Hotel Reservation for 7 days', 'Round trip flight accomodation']} />
                 </div>
 
-                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full w-full">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer flex flex-1 items-stretch">
                   <PricingCard color='dark blue' location='Boracay' promo='leveled up' price={1599} deals={['Choose ANY 2 from the tour packages (tour guide included)', 'Free Hotel Reservation for 6 days', 'Round trip flight accomodation']} />
                 </div>
-              </div>
+            </div>
           </div>
         </section>
 

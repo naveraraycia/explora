@@ -148,22 +148,17 @@ function Palawan() {
         <section id="purchase-section" className="mt-20">
           <PurchaseHeader bgImg={purchaseHeader} />
 
-          <div className="relative px-5 py-20 md:px-20" style={{
-           
-          }}>
-   
-              
-              <div className="flex flex-col xl:block xl:columns-3 space-y-20 xl:space-y-0 xl:gap-12">
-
-                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full w-full">
+          <div className="relative px-5 py-20 md:px-20"> 
+            <div className="flex flex-col space-y-10 xl:flex-row xl:space-x-10 xl:space-y-0">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer flex flex-1 items-stretch">
                   <PricingCard color='blue' location='Palawan' promo='basic' price={999} deals={['Choose ANY 1 from the tour packages (tour guide included)', 'Free Hotel Reservation for 5 days', 'Round trip flight accomodation']} />
                 </div>
 
-                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full w-full">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer flex flex-1 items-stretch">
                   <PricingCard color='blue' location='Palawan' promo='premium' price={1999} deals={['Avail ALL the tour packages (tour guide included)', 'Free Hotel Reservation for 7 days', 'Round trip flight accomodation']} />
                 </div>
 
-                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full w-full">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer flex flex-1 items-stretch">
                   <PricingCard color='blue' location='Palawan' promo='leveled up' price={1299} deals={['Choose ANY 2 from the tour packages (tour guide included)', 'Free Hotel Reservation for 6 days', 'Round trip flight accomodation']} />
                 </div>
               </div>

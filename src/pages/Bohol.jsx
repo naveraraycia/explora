@@ -11,6 +11,8 @@ import PurchaseHeader from "../components/shared/PurchaseHeader"
 import PricingCard from "../components/shared/PricingCard"
 import Footer from "../components/shared/Footer"
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import CommentSet from '../components/shared/CommentSet'
 import featureImg from '../assets/desktop/boholFeature.jpg'
 import package1 from '../assets/desktop/boholPackage1.jpg'
@@ -123,8 +125,6 @@ function Bohol() {
               <Package number='02' title='River Cruise' description='Experience a serene cruise on Loboc River as our tour guide shares the history of the island and comunity.' subDescription='Discover yet another cultural wonder of Bohol. This package include free lunch and snacks within the cruise ship.' tourImg={package2} />
               
               <Package number='03' title='Trip to Chocolate Hills with Tarsier' description='Discover the best of Bohol Province as you take a look at the majestic geological formations of the Chocolate Hills.' subDescription='Visit the remarkable geological formations known as the Chocolate Hills with a private guide and observe the little local Tarsier primates at a wildlife refuge. ' order='reverse' tourImg={package3} />
-
-
           </div>
 
         
@@ -154,20 +154,16 @@ function Bohol() {
           <PurchaseHeader bgImg={purchaseHeader} />
 
           <div className="relative px-5 py-20 md:px-20">
-   
-
-              <div className="flex flex-col xl:block xl:columns-3 space-y-20 xl:space-y-0 xl:gap-12">
-              {/* <div className="flex space-y-10 flex-col md:flex-row items-center justify-around md:space-y-0 md:space-x-10"> */}
-
-                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer h-full w-full ">
+            <div className="flex flex-col space-y-10 xl:flex-row xl:space-x-10 xl:space-y-0">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer flex flex-1 items-stretch">
                   <PricingCard color='brown' location='Bohol' promo='basic' price={699} deals={['Choose ANY 1 from the tour packages (tour guide included)', 'Free Hotel Reservation for 5 days', 'Round trip flight accomodation']} />
                 </div>
 
-                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer w-full h-full">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer flex flex-1 items-stretch">
                   <PricingCard color='brown' location='Bohol' promo='premium' price={1499} deals={['Avail ALL the tour packages (tour guide included)', 'Free Hotel Reservation for 7 days', 'Round trip flight accomodation']} />
                 </div>
 
-                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer w-full h-full">
+                <div className="xl:hover:scale-110 hover:shadow-lg hover:cursor-pointer flex flex-1 items-stretch">
                   <PricingCard color='brown' location='Bohol' promo='leveled up' price={999} deals={['Choose ANY 2 from the tour packages (tour guide included)', 'Free Hotel Reservation for 6 days', 'Round trip flight accomodation']} />
                 </div>
               </div>

@@ -159,7 +159,7 @@ function EditProfile() {
           
           <div className='flex flex-col space-y-3'>
             <label htmlFor="name" className='font-sans text-md font-bold text-gray'>Email</label>
-            <input type="email" className="rounded-lg bg-white p-4 text-gray text-md placeholder:text-md placeholder:text-lightGray placeholder:font-sans focus:outline-none" placeholder={email} value={email} onChange={onChange} id="email" />
+            <input type="email" className="rounded-lg bg-white p-4 text-gray text-md placeholder:text-md placeholder:text-lightGray placeholder:font-sans focus:outline-none" placeholder={email} value={email} onChange={onChange} id="email"  />
           </div>
 
           <p className="font-sans text-md font-semibold w-fit text-blueGreen hover:text-darkBlueGreen hover:cursor-pointer" onClick={()=> onSubmit()}>Save Changes</p>

@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import CardIcon from './CardIcon'
 
-
-
 function CommentSet({data}) {
 
 let actualDate = new Date(data.timestamp.seconds * 1000 + data.timestamp.nanoseconds/1000000)
@@ -19,7 +17,7 @@ fullDate = `${month}-${day}-${year}`
   return (
     <div className="container h-full mx-auto px-5 md:pl-10 py-20">
 
-          <CardIcon inherit={true} bgColor={data.location === 'Bohol' ? 'brown' : data.location === 'Palawan' ? 'dark blue' : data.location === 'Boracay' ? 'dark blue green' : 'sand'}>
+      <CardIcon inherit={true} bgColor={data.location === 'Bohol' ? 'brown' : data.location === 'Palawan' ? 'dark blue' : data.location === 'Boracay' ? 'dark blue green' : 'sand'}>
           <div className="flex flex-col space-y-5 font-sans justify-between" style={{
             height: 'inherit'
             }}>
@@ -35,8 +33,7 @@ fullDate = `${month}-${day}-${year}`
                 `}>{data.username}</p>
                 <p className="text-xs text-left capitalize">{fullDate}</p>
               </div>
-            </div>
-           
+            </div>    
            </div>
         </CardIcon>
   
