@@ -38,7 +38,6 @@ function App() {
     }
   })
   return (
-     
         <Routes>
           {/* Index */}
           <Route path='/' element={<Explora />} />

@@ -1,15 +1,13 @@
-import headerImg from '../assets/desktop/profileHeader.jpg'
-import Navbar from '../components/shared/Navbar'
-import {getAuth, updateProfile, updateEmail} from 'firebase/auth'
-import {useNavigate, Link } from 'react-router-dom'
+import { getAuth, updateProfile, updateEmail } from 'firebase/auth'
+import { useNavigate, Link } from 'react-router-dom'
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { updateDoc, doc, getDoc } from 'firebase/firestore'
 import { db } from '../firebase.config'
-import {useState, useEffect} from 'react'
-import {toast, Flip} from 'react-toastify'
-
-import {FaFacebookSquare, FaInstagramSquare, FaTwitterSquare} from 'react-icons/fa'
-
+import { useState, useEffect } from 'react'
+import { toast, Flip } from 'react-toastify'
+import { FaFacebookSquare, FaInstagramSquare, FaTwitterSquare } from 'react-icons/fa'
+import Navbar from '../components/shared/Navbar'
+import headerImg from '../assets/desktop/profileHeader.jpg'
 
 function EditProfile() {
   const footerYear = new Date().getFullYear()
@@ -125,79 +123,69 @@ function EditProfile() {
 
   return (
     <>
-       <section id="edit-profile" className='space-y-10'>
-      <div className="bg-cover bg-center w-full h-[300px]" style={{
-        backgroundImage: `url(${headerImg})`
-      }}>
-        <div className="container flex-col flex max-w-6xl mx-auto px-5 py-12">
-          <Navbar />    
-        </div>
-      </div>
-
-      <div className="container space-y-5 max-w-6xl mx-auto px-5 py-12 md:space-y-0">
-        <form className='flex flex-col space-y-10 md:flex-row md:space-y-0 md:space-x-10 '>
-        <div className="flex-col items-center flex space-y-5 sm:inline-flex sm:items-start md:items-center">
-          <img src={defaultPhoto} alt="profile" className='rounded-lg border-4 border-white w-[200px] h-[200px]' />
-          <label>
-            <input type="file" className="inline text-sm text-slate-500
-            file:mr-4 file:py-2 file:px-4
-            file:rounded-lg file:border-0
-            file:text-sm file:font-semibold file:font-sans
-            file:bg-white file:text-blueGreen
-            hover:file:bg-slate-200 hover:cursor-pointer
-            " onChange={onFileUpload} accept='.jpg,.png,.jpeg'/>
-          </label>
-          <p className="font-sans text-md font-semibold w-fit text-blueGreen hover:text-darkBlueGreen hover:cursor-pointer" onClick={()=> onSubmitImage()}>Save Photo</p>
-            
-        </div>
-
-        <div className="flex flex-col flex-1 space-y-6">
-          <div className='flex flex-col space-y-3'>
-            <label htmlFor="name" className='font-sans text-md font-bold text-gray'>Full Name</label>
-            <input type="text" className="rounded-lg bg-white p-4 text-gray text-md placeholder:text-md placeholder:text-lightGray placeholder:font-sans focus:outline-none" placeholder={name} value={name} onChange={onChange} id="name" />
+      <section id="edit-profile" className='space-y-10'>
+        <div className="bg-cover bg-center w-full h-[300px]" style={{backgroundImage: `url(${headerImg})`}}>
+          <div className="container flex-col flex max-w-6xl mx-auto px-5 py-12">
+            <Navbar />    
           </div>
-          
-          <div className='flex flex-col space-y-3'>
-            <label htmlFor="name" className='font-sans text-md font-bold text-gray'>Email</label>
-            <input type="email" className="rounded-lg bg-white p-4 text-gray text-md placeholder:text-md placeholder:text-lightGray placeholder:font-sans focus:outline-none" placeholder={email} value={email} onChange={onChange} id="email"  />
-          </div>
-
-          <p className="font-sans text-md font-semibold w-fit text-blueGreen hover:text-darkBlueGreen hover:cursor-pointer" onClick={()=> onSubmit()}>Save Changes</p>
-
         </div>
-        </form>
-      </div>
 
-      
-    <footer className='bg-blueGreen mt-20'>
-     
-     <div className='flex flex-col py-10 px-5  space-y-4 items-center justify-end md:justify-between md:items-end md:flex-row md:p-20 md:py-10'>
+        <div className="container space-y-5 max-w-6xl mx-auto px-5 py-12 md:space-y-0">
+          <form className='flex flex-col space-y-10 md:flex-row md:space-y-0 md:space-x-10 '>
+            <div className="flex-col items-center flex space-y-5 sm:inline-flex sm:items-start md:items-center">
+              <img src={defaultPhoto} alt="profile" className='rounded-lg border-4 border-white w-[200px] h-[200px]' />
+              <label>
+                <input type="file" className="inline text-sm text-slate-500
+                file:mr-4 file:py-2 file:px-4
+                file:rounded-lg file:border-0
+                file:text-sm file:font-semibold file:font-sans
+                file:bg-white file:text-blueGreen
+                hover:file:bg-slate-200 hover:cursor-pointer
+                " onChange={onFileUpload} accept='.jpg,.png,.jpeg'/>
+              </label>
+              <p className="font-sans text-md font-semibold w-fit text-blueGreen hover:text-darkBlueGreen hover:cursor-pointer" onClick={()=> onSubmitImage()}>Save Photo</p>    
+            </div>
 
-      <div className="flex space-x-4">
-        <a href='https://www.facebook.com/' target={'_blank'} rel='noreferrer'>
-        <FaFacebookSquare className='text-4xl md:text-5xl text-white hover:text-darkBlueGreen' />
-        </a>
+            <div className="flex flex-col flex-1 space-y-6">
+              <div className='flex flex-col space-y-3'>
+                <label htmlFor="name" className='font-sans text-md font-bold text-gray'>Full Name</label>
+                <input type="text" className="rounded-lg bg-white p-4 text-gray text-md placeholder:text-md placeholder:text-lightGray placeholder:font-sans focus:outline-none" placeholder={name} value={name} onChange={onChange} id="name" />
+              </div>
+              
+              <div className='flex flex-col space-y-3'>
+                <label htmlFor="name" className='font-sans text-md font-bold text-gray'>Email</label>
+                <input type="email" className="rounded-lg bg-white p-4 text-gray text-md placeholder:text-md placeholder:text-lightGray placeholder:font-sans focus:outline-none" placeholder={email} value={email} onChange={onChange} id="email"  />
+              </div>
 
-        <a href='https://www.instagram.com/' target={'_blank'} rel='noreferrer'>
-        <FaInstagramSquare className='text-4xl md:text-5xl text-white hover:text-darkBlueGreen' />
-        </a>
+              <p className="font-sans text-md font-semibold w-fit text-blueGreen hover:text-darkBlueGreen hover:cursor-pointer" onClick={()=> onSubmit()}>Save Changes</p>
+            </div>
+          </form>
+        </div>
 
-        <a href='https://twitter.com/?lang=en' target={'_blank'} rel='noreferrer'>
-        <FaTwitterSquare className='text-4xl md:text-5xl text-white hover:text-darkBlueGreen' />
-        </a>
-      </div>
+        <footer className='bg-blueGreen mt-20'> 
+          <div className='flex flex-col py-10 px-5  space-y-4 items-center justify-end md:justify-between md:items-end md:flex-row md:p-20 md:py-10'>
+            <div className="flex space-x-4">
+              <a href='https://www.facebook.com/' target={'_blank'} rel='noreferrer'>
+                <FaFacebookSquare className='text-4xl md:text-5xl text-white hover:text-darkBlueGreen' />
+              </a>
 
-      <Link to='/'>
-      <p className="font-sans font-black text-white text-5xl text-center uppercase hover:cursor-pointer md:text-5xl">Explora</p>
-      </Link>
+              <a href='https://www.instagram.com/' target={'_blank'} rel='noreferrer'>
+                <FaInstagramSquare className='text-4xl md:text-5xl text-white hover:text-darkBlueGreen' />
+              </a>
 
-      <p className="font-sans text-center font-semibold text-lg tracking-wide text-white md:text-2xl md:font-bold">&copy; {footerYear} <span className='text-xs'> RMFN</span></p>
+              <a href='https://twitter.com/?lang=en' target={'_blank'} rel='noreferrer'>
+                <FaTwitterSquare className='text-4xl md:text-5xl text-white hover:text-darkBlueGreen' />
+              </a>
+            </div>
 
-     
-     </div>
+            <Link to='/'>
+              <p className="font-sans font-black text-white text-5xl text-center uppercase hover:cursor-pointer md:text-5xl">Explora</p>
+            </Link>
 
-    </footer>
-    </section>
+            <p className="font-sans text-center font-semibold text-lg tracking-wide text-white md:text-2xl md:font-bold">&copy; {footerYear} <span className='text-xs'> RMFN</span></p>
+          </div>
+        </footer>
+      </section>
     </>
   )
 }

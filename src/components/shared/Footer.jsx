@@ -1,18 +1,12 @@
 import PropTypes from 'prop-types'
-import {FaFacebookSquare, FaInstagramSquare, FaTwitterSquare} from 'react-icons/fa'
-import {Link} from 'react-router-dom'
+import { FaFacebookSquare, FaInstagramSquare, FaTwitterSquare } from 'react-icons/fa'
 
-function Footer({footerBg, gradientColor}) {
-
+function Footer({ footerBg, gradientColor }) {
   const footerYear = new Date().getFullYear()
 
   return (
-    <footer className='relative h-[350px] bg-cover bg-no-repeat bg-center' style={{
-      backgroundImage: `url(${footerBg})`
-    }} >
-     
-     <div className={`${gradientColor === 'sand' ? 'gradient-overlay' : gradientColor === 'brown' ? 'brown-gradient-overlay' : gradientColor === 'blue' ? 'blue-gradient-overlay' : gradientColor === 'dark blue' ? 'darkBlue-gradient-overlay' : ''}
-      flex flex-col p-20 pb-5 space-y-4 items-center justify-end md:justify-between md:items-end md:flex-row md:p-20 md:py-10`}>
+    <footer className='relative h-[350px] bg-cover bg-no-repeat bg-center' style={{backgroundImage: `url(${footerBg})`}}> 
+     <div className={`${gradientColor === 'brown' ? 'brown-gradient-overlay' : gradientColor === 'blue' ? 'blue-gradient-overlay' : gradientColor === 'dark blue' ? 'darkBlue-gradient-overlay' : 'gradient-overlay'} flex flex-col p-20 pb-5 space-y-4 items-center justify-end md:justify-between md:items-end md:flex-row md:p-20 md:py-10`}>
 
       <div className="flex space-x-4">
         <a href='https://www.facebook.com/' target={'_blank'} rel='noreferrer'>
@@ -28,15 +22,12 @@ function Footer({footerBg, gradientColor}) {
         </a>
       </div>
 
-      <Link to='/'>
-      <p className="font-sans font-black text-white text-5xl text-center uppercase hover:cursor-pointer md:text-7xl">Explora</p>
-      </Link>
+      <a href='/#home'>
+        <p className="font-sans font-black text-white text-5xl text-center uppercase hover:cursor-pointer md:text-7xl">Explora</p>
+      </a>
 
       <p className="font-sans text-center font-semibold text-lg tracking-wide text-white md:text-2xl md:font-bold">&copy; {footerYear} <span className='text-xs'> RMFN</span></p>
-
-     
      </div>
-
     </footer>
   )
 }

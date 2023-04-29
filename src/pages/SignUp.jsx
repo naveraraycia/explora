@@ -4,10 +4,10 @@ import { db } from '../firebase.config'
 import { useNavigate } from 'react-router-dom'
 import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
 import { toast, Flip } from 'react-toastify'
-import OAuth from '../components/OAuth'
-import signUpPhoto from '../assets/desktop/signup.jpg'
 import { Link } from 'react-router-dom'
+import OAuth from '../components/OAuth'
 import Button from '../components/shared/Button'
+import signUpPhoto from '../assets/desktop/signup.jpg'
 import visibilityIcon from '../assets/icons/visibilityIcon.svg'
 
 
@@ -68,11 +68,13 @@ function SignUp() {
             <div className="max-w-md">
               <input type="text" className="rounded-lg border border-lightGray mb-5 w-full text-gray p-5 placeholder:font-sans placeholder:font-normal focus:outline-none" placeholder="Name" id='name' value={name} onChange={onChange} />
               <input type="email" className="rounded-lg border border-lightGray mb-5 w-full text-gray p-5 placeholder:font-sans placeholder:font-normal focus:outline-none" placeholder="Email" id='email' value={email} onChange={onChange} />
+
               <div className="relative flex items-center justify-end">
                 <img src={visibilityIcon} alt='show password' onClick={()=> setShowPassword((prevState) => !prevState)} className="absolute top-5 right-5 text-gray hover:cursor-pointer" />
                 <input type={showPassword ? 'text' : 'password'} className="rounded-lg border border-lightGray mb-5 w-full text-gray p-5 placeholder:font-sans placeholder:font-normal focus:outline-none" placeholder="Password" id='password' value={password} onChange={onChange} />
               </div>
             </div>
+
             <div className="flex flex-col items-center justify-between md:flex-row">
               <Link to='/sign-in' className='order-2'>
               <p className="font-sans font-normal text-blueGreen text-sm tracking-wider hover:text-darkBlueGreen hover:md:scale-110 mt-5 md:mt-0">Log In instead</p>
@@ -80,19 +82,21 @@ function SignUp() {
               <Button type={'submit'} className="order-1" color='blue'>SIGN UP</Button>
             </div>
           </form>
-        <div className="flex mb-5 items-center justify-between flex-col md:flex-row">
-          <p className=" font-sans font-normal my-5 text-center text-gray text-sm tracking-wider md:text-left">or sign up with</p>   
-          <OAuth />
+
+          <div className="flex mb-5 items-center justify-between flex-col md:flex-row">
+            <p className=" font-sans font-normal my-5 text-center text-gray text-sm tracking-wider md:text-left">or sign up with</p>   
+            <OAuth />
+          </div>
+
+          <div className="my-5"> 
+            <Link to='/'>
+              <p className="font-sans text-gray text-xs hover:cursor-pointer hover:md:underline hover:text-[#373131] inline">Back to home</p>
+            </Link>
+          </div>
         </div>
-        <div className="my-5"> 
-          <Link to='/'>
-            <p className="font-sans text-gray text-xs hover:cursor-pointer hover:md:underline hover:text-[#373131] inline">Back to home</p>
-          </Link>
-        </div>
-      </div>
       
-      <img src={signUpPhoto} alt="login" className="order-1 w-[430px] hidden lg:block lg:rounded-l-2xl" />
-    </div>
+        <img src={signUpPhoto} alt="login" className="order-1 w-[430px] hidden lg:block lg:rounded-l-2xl" />
+      </div>
     </div>
   )
 }
