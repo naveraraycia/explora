@@ -19,7 +19,6 @@ function Explora() {
   const [loading, setLoading] = useState(true)
 
   useEffect(()=>{
-
     async function fetchComments(){
       const commentsRef = collection(db, 'comments')
       const q = query(commentsRef, orderBy('timestamp', 'desc'), limit(8))
@@ -32,9 +31,9 @@ function Explora() {
                   data: docItem.data()
                 })
       })
+
       setComments(commentsArray)
       setLoading(false)
-
     }
     
     fetchComments()

@@ -1,7 +1,5 @@
-import {Routes, Route, useLocation} from 'react-router-dom'
-import {useState, useEffect} from 'react'
-
-// pages
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import Explora from './pages/Explora';
@@ -14,21 +12,17 @@ import Profile from './pages/Profile';
 import ForgotPassword from './pages/ForgotPassword';
 import EditProfile from './pages/EditProfile';
 import NotFound from './pages/NotFound';
-// import private route
 import PrivateRoute from './components/PrivateRoute'
 
 function App() {
   const [color, changeColor] = useState("#F1EDE7");
   document.body.style.backgroundColor = color;
-
   const location = useLocation()
 
   // change bg color per page
   useEffect(()=>{
     if(location.pathname === '/bohol'){
-      // Change background color
       changeColor('#2E2725')
-      // changeColor('#774C35')
     } else if(location.pathname === '/palawan') {
       changeColor('#133942')
     } else if(location.pathname === '/boracay') {
@@ -39,41 +33,24 @@ function App() {
   }, [location.pathname])
   
   return (
-        <Routes>
-          {/* Index */}
-          <Route path='/' element={<Explora />} />
-          {/* Login */}
-          <Route path='/sign-in' element={<LogIn />} />
-          {/* Sign Up */}
-          <Route path='/sign-up' element={<SignUp />} /> 
-          {/* Forgot Password */}
-          <Route path='/forgot-password' element={<ForgotPassword />} />
-          {/* About Us */}
-          <Route path='/about-us' element={<AboutUs />} />
-          {/* Not found page */}
-          <Route path='/*' element={<NotFound />} />
-          
-          {/* Profile - Private Route */}
-          <Route path='/profile' element={<PrivateRoute />}>
-            <Route path='/profile' element={<Profile />} />
-          </Route>
-
-          <Route path='/edit-profile' element={<PrivateRoute />}>
-            <Route path='/edit-profile' element={<EditProfile />} />
-          </Route>
-          
-          {/* Contact Us */}
-          <Route path='/contact-us' element={<ContactUs />} />
-          {/* Bohol */}
-          <Route path='/bohol' element={<Bohol />} />
-          {/* Palawan */}
-          <Route path='/palawan' element={<Palawan />} />
-          {/* Boracay */}
-          <Route path='/boracay' element={<Boracay />} />
-
-        </Routes>
-     
-   
+    <Routes>
+      <Route path='/' element={<Explora />} />
+      <Route path='/sign-in' element={<LogIn />} />
+      <Route path='/sign-up' element={<SignUp />} /> 
+      <Route path='/forgot-password' element={<ForgotPassword />} />
+      <Route path='/about-us' element={<AboutUs />} />
+      <Route path='/*' element={<NotFound />} />
+      <Route path='/profile' element={<PrivateRoute />}>
+        <Route path='/profile' element={<Profile />} />
+      </Route>
+      <Route path='/edit-profile' element={<PrivateRoute />}>
+        <Route path='/edit-profile' element={<EditProfile />} />
+      </Route>
+      <Route path='/contact-us' element={<ContactUs />} />
+      <Route path='/bohol' element={<Bohol />} />
+      <Route path='/palawan' element={<Palawan />} />
+      <Route path='/boracay' element={<Boracay />} />
+    </Routes>
   );
 }
 

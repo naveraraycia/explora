@@ -13,7 +13,8 @@ function ForgotPassword() {
 
   async function onSubmit(e){
     e.preventDefault()
-    try{
+    
+    try {
       const auth = getAuth()
       await sendPasswordResetEmail(auth, email)
       toast.success('Email was sent', {transition: Flip})

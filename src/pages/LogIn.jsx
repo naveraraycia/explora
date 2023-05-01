@@ -15,8 +15,7 @@ function LogIn() {
     password: ''
   })
 
-  const {email, password} = formData
-
+  const { email, password } = formData
   const navigate = useNavigate()
 
   function onChange(e) {

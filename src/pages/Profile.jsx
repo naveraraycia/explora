@@ -29,7 +29,9 @@ function Profile() {
       const docSnap = await getDoc(docRef)
       setProfilePic(docSnap.data().profileImg)
     }
+
     fetchProfilePic()
+    
     async function fetchUserBookings() {
       const bookingsRef = collection(db, 'bookings')
       const q = query(bookingsRef, where('userRef', '==', auth.currentUser.uid), orderBy('timestamp', 'desc'))

@@ -10,7 +10,6 @@ import Button from '../components/shared/Button'
 import signUpPhoto from '../assets/desktop/signup.jpg'
 import visibilityIcon from '../assets/icons/visibilityIcon.svg'
 
-
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
@@ -20,11 +19,10 @@ function SignUp() {
     profileImg: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
   })
 
+  const { email, password, name } = formData
   const navigate = useNavigate()
 
-  const {email, password, name} = formData
-
-  function onChange(e){
+  function onChange(e) {
     setFormData((prevState)=> ({
       ...prevState,
       [e.target.id]: e.target.value
@@ -34,7 +32,7 @@ function SignUp() {
   async function onSubmit(e) {
     e.preventDefault()
     toast.success('Signing in...', {transition: Flip, autoClose: 800})
-    try{
+    try {
       const auth = getAuth()
       const userCredential = await createUserWithEmailAndPassword(auth, email, password)
       const user = userCredential.user
@@ -44,11 +42,7 @@ function SignUp() {
 
       // for saving user to firestore database
       const formDataCopy = {...formData}
-
-      // don't include password when storing data to database
       delete formDataCopy.password
-
-      // add timestamp property
       formDataCopy.timestamp = serverTimestamp()
 
       await setDoc(doc(db, 'users', user.uid), formDataCopy)
