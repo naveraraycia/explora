@@ -7,7 +7,6 @@ import contactPic from "../assets/desktop/contactPic.jpg"
 import footerPic from '../assets/desktop/footerPic.jpg'
 
 function ContactUs() {
-
   return (
     <div className="flex flex-col justify-between space-y-20">
       <AboutHeader headerBg={contactPic} smallTitle='get in touch' bigTitle='contact us' />

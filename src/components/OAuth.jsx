@@ -14,18 +14,17 @@ function OAuth() {
       const provider = new GoogleAuthProvider()
       const result = await signInWithPopup(auth, provider)
       const user = result.user
-
       const docRef = doc(db, 'users', user.uid)
       const docSnap = await getDoc(docRef)
 
       if(!docSnap.exists()){
-        // if user does not exist => create user
         await setDoc(doc(db, 'users', user.uid), {
           name: user.displayName,
           email: user.email,
           timestamp: serverTimestamp()
         })
       }
+
       toast.success('Logging in...', {transition: Flip, autoClose: 500})
       navigate('/profile')
     } catch(error){

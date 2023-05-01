@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 
 function AccordionTab({ tabIndex, question, answer }) {
-
   return (
     <>
       {/* <!-- Tab 1 --> */}

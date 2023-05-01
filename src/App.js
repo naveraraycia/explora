@@ -36,7 +36,8 @@ function App() {
     } else {
       changeColor('#F1EDE7')
     }
-  })
+  }, [location.pathname])
+  
   return (
         <Routes>
           {/* Index */}

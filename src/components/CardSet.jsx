@@ -3,7 +3,6 @@ import CardIcon from './shared/CardIcon'
 import { FaPlane, FaThumbsUp, FaTag } from 'react-icons/fa'
 
 function CardSet({ cardContent }) {
-
   return (
     <div className="flex-col flex justify-between space-y-10 md:flex-row md:space-x-10 md:space-y-0">
       {cardContent.map((cardItem, index)=>(

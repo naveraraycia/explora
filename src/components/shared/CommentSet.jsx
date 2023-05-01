@@ -4,7 +4,6 @@ import CardIcon from './CardIcon'
 function CommentSet({ data }) {
 let actualDate = new Date(data.timestamp.seconds * 1000 + data.timestamp.nanoseconds/1000000)
 let month, day, year, fullDate;
-
 month = actualDate.getMonth() + 1
 day = actualDate.getDate()
 year = actualDate.getFullYear()

@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import Button from './shared/Button'
 
 function DestinationSet({ displayImage, title, description }) {
-
   return (
     <div className="flex-col flex-1 flex space-y-5">
       <div className="h-[400px] bg-cover bg-no-repeat rounded-lg" style={{backgroundImage: `url(${displayImage})`}}></div>

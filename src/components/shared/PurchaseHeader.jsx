@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function PurchaseHeader({bgImg}) {
+function PurchaseHeader({ bgImg }) {
   return (
     <div className='relative w-full py-20 px-10  bg-cover bg-center text-white' style={{backgroundImage: `url(${bgImg})`}}>
       <div className="dark-overlay flex items-center px-10 justify-center">

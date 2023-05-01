@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import notFound from '../assets/icons/notFound.svg'
 
 function NotFound() {
-
   return (
     <div className="flex flex-col space-y-7 items-center justify-center p-10 h-screen md:p-20 md:space-y-10">
       <img src={notFound} className="w-[200px] md:w-[400px]" alt="Page not found" />

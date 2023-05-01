@@ -1,5 +1,3 @@
-// @todo => Cleanup function part
-
 import PropTypes from 'prop-types'
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -15,8 +13,6 @@ import boholImg from '../assets/desktop/bookingBohol.jpg'
 function BookingItem({ booking, id }) {
   const auth = getAuth()
   const navigate = useNavigate()
-
-  const [loading, setLoading] = useState(true)
   const [disabledBtn, setDisabledBtn] = useState(false)
   const [commentPublished, setCommentPublished] = useState(false)
   const [showModal, setShowModal] = useState(null)
@@ -28,18 +24,15 @@ function BookingItem({ booking, id }) {
     userImg: '',
     username: '',
   })
-  const {location, price, timestamp, comment, travelPackage} = booking
+
+  const { location, price, timestamp, travelPackage } = booking
 
   let actualDate = new Date(timestamp.seconds * 1000 + timestamp.nanoseconds/1000000)
-
   let month, day, year, fullDate;
-
   month = actualDate.getMonth() + 1
   day = actualDate.getDate()
   year = actualDate.getFullYear()
   fullDate = `${month}-${day}-${year}`
-
-  ////////////////////////////////////////////////
 
   useEffect(()=>{
     if(isMounted) {
@@ -54,27 +47,25 @@ function BookingItem({ booking, id }) {
       })
     }
 
-    async function fetchProfilePic(){
+    async function fetchProfilePic() {
       const docRef = doc(db, 'users', auth.currentUser.uid)
       const docSnap = await getDoc(docRef)
       setProfilePic(docSnap.data().profileImg)
     }
 
     fetchProfilePic()
-
+    // eslint-disable-next-line
   },[isMounted])
-
-
 
   function openReviewModal() {
     setShowModal(true)
 
-      setCommentData((prevState)=>({
-        ...prevState,
-        username: auth.currentUser.displayName,
-        location: location,
-        userImg: profilePic
-      }))
+    setCommentData((prevState)=>({
+      ...prevState,
+      username: auth.currentUser.displayName,
+      location: location,
+      userImg: profilePic
+    }))
   }
 
   function closeModal() {
@@ -87,44 +78,33 @@ function BookingItem({ booking, id }) {
       userImg: '',
       text: ''
     }))
-
   }
 
-  function closeOnBackground(e) {
-    if(e.target.classList.contains('close-modal')){
-      closeModal()
-    }
-  }
-
-  async function onSubmit(e){
+  async function onSubmit(e) {
     setCommentPublished(true)
     e.preventDefault()
     
-    if(commentData.text === ''){
+    if(commentData.text === '') {
       toast.error('Please write a comment before publishing')
       setCommentPublished(false)
     } else {
      toast.success('Successfully reviewed!', {transition: Flip})
 
+     const commentDataCopy = {
+      ...commentData,
+      timestamp: serverTimestamp()
+     }
   
-      const commentDataCopy = {
-        ...commentData,
-        timestamp: serverTimestamp()
-      }
-  
-      const docRef = await addDoc(collection(db, 'comments'),commentDataCopy)
+     await addDoc(collection(db, 'comments'),commentDataCopy)
 
-      const bookingRef = doc(db, 'bookings', id)
-        await updateDoc(bookingRef, {
-          rated: true
-        })
+     const bookingRef = doc(db, 'bookings', id)
+     await updateDoc(bookingRef, {
+       rated: true
+     })
       
-      
-      setLoading(false)
-      navigate(0)
-    
-      }
+     navigate(0)
     }
+  }
 
   function onMutate(e){
     e.preventDefault()
@@ -136,13 +116,10 @@ function BookingItem({ booking, id }) {
         ...prevState,
         [e.target.id]: e.target.value,
       }))
-    }
-    
+    }    
   }
 
   return (
-    <>
-  
     <section id="booking-package">
       <div className="flex flex-col space-y-10 md:items-center md:space-x-10 md:space-y-0 md:flex-row my-10 ">
         <div className="bg-center bg-cover w-full h-[350px] md:w-[400px] md:h-[400px] rounded-lg" style={{backgroundImage: `url(${location === 'Palawan' ? palawanImg : location === 'Bohol' ? boholImg : boracayImg})`
@@ -172,7 +149,12 @@ function BookingItem({ booking, id }) {
 
       {showModal &&
       (
-      <div id="review" className="close-modal fixed items-center py-20 px-5 justify-center w-full h-screen bg-[rgba(0,0,0,0.2)] top-0 left-0 right-0 bottom-0 " onClick={closeOnBackground}>
+      <div id="review" className="close-modal fixed items-center py-20 px-5 justify-center w-full h-screen bg-[rgba(0,0,0,0.2)] top-0 left-0 right-0 bottom-0 " 
+      onClick={(e) => {
+        if(e.target.classList.contains('close-modal')){
+          closeModal()
+        }
+      }}>
         <div className="p-10  bg-white text-gray items-center justify-center max-w-3xl mx-auto flex flex-col space-y-8 rounded-lg md:p-20">
           <h1 className="font-sans font-bold text-xl md:text-3xl">Write your review</h1>
           <p className="font-sans text-sm tracking-wide text-md max-w-xs leading-6 md:text-lg">Let people know how much you enjoyed your <span className='font-bold'>{booking.location}</span> trip!</p>
@@ -181,7 +163,7 @@ function BookingItem({ booking, id }) {
 
           <div className="flex flex-col w-full space-y-3">
             <div className={`${commentPublished ? 'pointer-events-none' : ''} w-full`} onClick={onSubmit}>
-              <Button btnBlock={true} isDisabled={disabledBtn} color='blue'>PUBLISH</Button>
+              <Button btnBlock={true} isDisabled={disabledBtn} color='teal'>PUBLISH</Button>
             </div>
 
             <p className="text-sm font-sans tracking-wide text-blueGreen hover:text-darkBlueGreen mx-auto capitalize hover:cursor-pointer w-fit" onClick={closeModal} >Close</p>
@@ -192,7 +174,6 @@ function BookingItem({ booking, id }) {
       )
       }
     </section>
-    </>
   )
 }
 

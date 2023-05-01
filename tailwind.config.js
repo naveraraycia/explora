@@ -28,7 +28,9 @@ module.exports = {
         darkBlue: '#1A384F',
         'blue-2': '#122C40',
         'blue-3': '#1A4869',
-        mustard: '#CEBC7B'
+        mustard: '#CEBC7B',
+        redError: '#D26363',
+        darkRedError: '#C74646'
       }
     },
   },

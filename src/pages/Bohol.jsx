@@ -24,7 +24,6 @@ import purchaseHeader from '../assets/desktop/boholPurchaseHeader.jpg'
 import footerImg from '../assets/desktop/boholFooter.jpg'
 
 function Bohol() {
-  
   const settings = {
     dots: false,
     infinite: true,

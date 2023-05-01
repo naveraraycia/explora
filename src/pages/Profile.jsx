@@ -14,13 +14,13 @@ function Profile() {
   const [bookings, setBookings] = useState(null)
   const [loading, setLoading] = useState(true)
   const [profilePic, setProfilePic] = useState(null)
-  const [formData, setFormData] = useState({
+  const [formData] = useState({
     name: auth.currentUser.displayName,
     email: auth.currentUser.email,
     photoURL: profilePic
   })
 
-  const {name, email, photoURL} = formData
+  const { name, email } = formData
   const navigate = useNavigate()
 
   useEffect(()=>{
@@ -89,11 +89,8 @@ function Profile() {
         <div className="flex flex-col">
           {!loading && bookings?.length > 0 && (
             <>
-              {bookings.map((bookingItem)=>(
-              
-                <BookingItem key={bookingItem.id} booking={bookingItem.data} id={bookingItem.id} />
-
-                
+              {bookings.map((bookingItem)=>(          
+                <BookingItem key={bookingItem.id} booking={bookingItem.data} id={bookingItem.id} />  
               ))}
             </>
           )}
