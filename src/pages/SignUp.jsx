@@ -54,7 +54,7 @@ function SignUp() {
 
   return (
     <div className="flex items-center justify-center min-h-screen md:p-10">
-      <div className="relative flex flex-col items-center w-full bg-white md:rounded-2xl  lg:shadow-2xl lg:items-stretch lg:flex-row lg:space-y-0 lg:m-0 lg:w-fit">
+      <div className="relative flex flex-col items-center w-full bg-white md:rounded-2xl  md:shadow-2xl lg:items-stretch lg:flex-row lg:space-y-0 lg:m-0 lg:w-fit">
         <div className="order-2 p-5 w-full max-w-[450px] md:p-10">
           <h1 className="font-sans font-bold text-gray text-4xl mb-5">Sign Up</h1>
           <p className="font-sans font-regular mb-5 text-gray tracking-wider leading-8">Create an account to start your awesome adventures!</p>

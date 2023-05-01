@@ -25,7 +25,7 @@ function ForgotPassword() {
 
   return (
     <div className="flex items-center justify-center min-h-screen md:p-10">
-      <div className="relative flex flex-col items-center h-screen w-full bg-white md:rounded-2xl md:h-fit lg:shadow-2xl lg:items-stretch lg:flex-row lg:space-y-0 lg:m-0 lg:w-fit">
+      <div className="relative flex flex-col items-center h-screen w-full bg-white md:rounded-2xl md:h-fit md:shadow-2xl lg:items-stretch lg:flex-row lg:space-y-0 lg:m-0 lg:w-fit">
           <div className="p-5 w-full max-w-[450px] md:p-10">
             <h1 className="font-sans font-bold text-gray text-4xl mb-5 md:text-center">Forgot Password</h1>
             <p className="font-sans font-regular mb-2 text-gray tracking-wider max-w-md md:text-center">Enter your email and we'll send you a link for resetting your password.</p>
