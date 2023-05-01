@@ -39,8 +39,6 @@ function Explora() {
     fetchComments()
   },[])
 
-
-  
   return (
     <>
     <Header headerBg={heroPic} btnColor='teal' btnRedirect='popular-destinations' smallTitle='discover' bigTitle='the Philippines' description={`We make it easy for you to find and book tours in the Philippines. We offer tours from Bohol to Boracay and Palawan. Book now!`} />

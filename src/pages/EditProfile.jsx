@@ -14,112 +14,83 @@ function EditProfile() {
   const auth = getAuth()
   const navigate = useNavigate()
   const storage = getStorage()
-  const [imageSave, setImageSave] = useState(false)
-  const [photo, setPhoto] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [photoURL, setPhotoURL] = useState('')
   const [defaultPhoto, setDefaultPhoto] = useState("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png")
   const [formData,setFormData] = useState({
     name: auth.currentUser.displayName,
     email: auth.currentUser.email
   })
 
-  const {name, email} = formData
+  const { name, email } = formData
 
-  async function upload(file, currentUser, setLoading){
-    const fileRef = ref(storage, 'images/' + auth.currentUser.uid)
-
-    setLoading(true)
-    console.log(loading)
-    uploadBytes(fileRef, file).then(()=> {
-      getDownloadURL(fileRef).then((url)=>{
-          setPhotoURL(url)
-          setDefaultPhoto(url)
-
-      }).catch(error => {
-       toast.error('An error occurred while uploading image', {transition: Flip})
-      })
-    }).catch(error => {
-      toast.error('An error occurred while uploading image', {transition: Flip})
-    })
-
-    setLoading(false)
-    toast.success('Changing image...', {transition: Flip, autoClose: 3000})
-  }
-
-  //////////////////////////////////////////////////
-
-  useEffect(()=>{
+  useEffect(()=> {
     async function fetchProfilePic(){
       const docRef = doc(db, 'users', auth.currentUser.uid)
       const docSnap = await getDoc(docRef)
       setDefaultPhoto(docSnap.data().profileImg)
-
     }
+
     fetchProfilePic()
-    
   },[auth.currentUser])
 
 
-  //////////////////////////////////////////////////
-
   async function onSubmit() {
-
-    try{
+    try {
       auth.currentUser.displayName !== name && (
-
         await updateProfile(auth.currentUser, {
           displayName: name
         })
       )
       
-      auth.currentUser.email !== email &&
-        (await updateEmail(auth.currentUser, email))
+      auth.currentUser.email !== email && (await updateEmail(auth.currentUser, email))
 
+      const userRef = doc(db, 'users', auth.currentUser.uid)
+      await updateDoc(userRef, {
+        name: name,
+        email: email
+      })
 
-        const userRef = doc(db, 'users', auth.currentUser.uid)
-        await updateDoc(userRef, {
-          name: name,
-          email: email
-        })
-
-        imageSave && (
-          updateDoc(userRef, {
-            profileImg: photoURL
-          })
-        )
-        toast.success('Saved', {transition: Flip, autoClose: 500})
-        navigate('/profile')
-        
-      
+      toast.success('Changes saved', {transition: Flip, autoClose: 500})
+      navigate('/profile')
     } catch(error) {
       toast.error('Could not edit your profile', {transition: Flip})
     }
   }
 
-  function onChange(e){
+  function onChange(e) {
     setFormData((prevState)=>({
       ...prevState,
       [e.target.id]: e.target.value
     }))
   }
 
-  function onSubmitImage(){
-    if(photo !== ''){
-      upload(photo, auth.currentUser, setLoading )
-      setImageSave(true)
-    } else {
-      toast.error('You did not upload an image')
-    }
-      
+  async function upload(file) {
+    const fileRef = ref(storage, 'images/' + auth.currentUser.uid)
+
+    uploadBytes(fileRef, file).then(()=> {
+      getDownloadURL(fileRef).then((url)=> {
+        const userRef = doc(db, 'users', auth.currentUser.uid)
+        setDefaultPhoto(url)
+        updateDoc(userRef, {
+          profileImg: defaultPhoto
+        })
+
+        toast.success('Changing profile photo...', {transition: Flip, autoClose: 500})
+        setTimeout(()=>{
+          window.location.reload()
+        }, 1000)
+      }).catch(() => {
+        toast.error('An error occurred while uploading image', {transition: Flip})
+      })
+    }).catch(() => {
+        toast.error('An error occurred while uploading image', {transition: Flip})
+    })
   }
 
-  function onFileUpload(e){
+  function onFileUpload(e) {
     if(e.target.files[0]){
-      setPhoto(e.target.files[0])
+      upload(e.target.files[0])
     }
   }
-
 
   return (
     <>
@@ -141,9 +112,8 @@ function EditProfile() {
                 file:text-sm file:font-semibold file:font-sans
                 file:bg-white file:text-blueGreen
                 hover:file:bg-slate-200 hover:cursor-pointer
-                " onChange={onFileUpload} accept='.jpg,.png,.jpeg'/>
+                " onChange={onFileUpload} accept='.jpg,.png,.jpeg, .gif'/>
               </label>
-              <p className="font-sans text-md font-semibold w-fit text-blueGreen hover:text-darkBlueGreen hover:cursor-pointer" onClick={()=> onSubmitImage()}>Save Photo</p>    
             </div>
 
             <div className="flex flex-col flex-1 space-y-6">

@@ -73,7 +73,7 @@ function SignUp() {
               <Link to='/sign-in' className='order-2'>
               <p className="font-sans font-normal text-blueGreen text-sm tracking-wider hover:text-darkBlueGreen hover:md:scale-110 mt-5 md:mt-0">Log In instead</p>
               </Link>
-              <Button type={'submit'} className="order-1" color='blue'>SIGN UP</Button>
+              <Button type={'submit'} className="order-1" color='teal'>SIGN UP</Button>
             </div>
           </form>
 
