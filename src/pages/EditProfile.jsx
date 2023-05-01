@@ -71,7 +71,7 @@ function EditProfile() {
         const userRef = doc(db, 'users', auth.currentUser.uid)
         setDefaultPhoto(url)
         updateDoc(userRef, {
-          profileImg: defaultPhoto
+          profileImg: url
         })
 
         toast.success('Changing profile photo...', {transition: Flip, autoClose: 500})
