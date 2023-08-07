@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Explora
+## Introduction
+Explora is a travel booking website created for a pretend travel company that offers tours for destinations in the Philippines specifically Bohol, Palawan, and Boracay.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Demo
+Explora is live [here](https://explora-ruddy.vercel.app/)
 
-## Available Scripts
+### Figma Design
+Check out the mockup [here](https://www.figma.com/file/gf7uSmzK3sGOQFUo5eAlmg/EXPLORA---Travel-Booking-Website?type=design&node-id=0%3A1&mode=design&t=qpT87XLr9gukHJfp-1)
 
-In the project directory, you can run:
+## Technologies Used
+The website is built with the following technologies:
+- React JS
+- Firebase Firestore
+- Firebase Storage
+- Tailwind CSS
 
-### `npm start`
+## Features
+### Create a profile
+To be able to choose a travel package, users should create a profile and register either through email or Google OAuth. Upon the creation of the account, the user could further setup their profile by clicking the "Edit profile" link where they could upload a profile image and update other account information such as name and email.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### View the destinations
+Users could view the exact details of the tours and location per destination upon clicking the "Learn More" button from the home page, which would take them to the specific destination's page. The page displays details regarding the packages you could avail such as the hotel, activities, places to visit in the location, and testimonials from other users.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Choose a tour package
+Upon visiting a specific destination's page, the user could choose which travel package to book. There are a total of 3 packages to choose from.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Leave a review
+When a travel package has been successfully booked, the user could leave a review to share their experiences. The review they submitted will reflect in the testimonial sections of the website both in the home page and the specific destination's page.
