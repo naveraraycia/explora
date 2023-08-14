@@ -132,7 +132,7 @@ function Palawan() {
       <section id="purchase-section" className="mt-20">
         <PurchaseHeader bgImg={purchaseHeader} />
 
-        <div className="relative px-5 py-20 md:px-20"> 
+        <div className="relative px-5 mx-auto py-20 max-w-fit md:px-20"> 
           <div className="flex flex-col space-y-10 xl:flex-row xl:space-x-10 xl:space-y-0">
             <div className="flex flex-1 items-stretch">
               <PricingCard color='teal' location='Palawan' promo='basic' price={999} deals={['Choose ANY 1 from the tour packages (tour guide included)', 'Free Hotel Reservation for 5 days', 'Round trip flight accomodation']} />

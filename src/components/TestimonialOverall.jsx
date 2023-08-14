@@ -7,6 +7,7 @@ function TestimonialOverall({ bgImg, commentData }) {
     dots: true,
     infinite: true,
     autoplay: true,
+    arrows: false,
     autoplaySpeed: 5000,
     cssEase: 'linear',
     speed: 700,

@@ -89,7 +89,7 @@ function Boracay() {
   return (
     <>
     <Header headerBg={heroPic} smallTitle='travel' bigTitle='to boracay' btnColor='brown' btnRedirect='purchase-section' description={`The Philippine island of Boracay is one of the most popular spots in Asia with its crystal clear waters and white sandy beaches. ⁣Start your island-hopping experience now. Load up on sunscreen, water, and a camera for that perfect Instagram shot.`} />
-    <div className="mt-10">
+    <div className="mt-10 mx-auto max-w-6xl">
       <Slider {...settings}>
         {!loading && (
           comments.map((commentItem)=>(
@@ -138,7 +138,7 @@ function Boracay() {
 
       <section id="purchase-section" className="mt-20">
         <PurchaseHeader bgImg={purchaseHeader} />
-        <div className="relative px-5 py-20 md:px-20">
+        <div className="relative px-5 mx-auto py-20 max-w-fit md:px-20">
           <div className="flex flex-col space-y-10 xl:flex-row xl:space-x-10 xl:space-y-0">
             <div className="flex flex-1 items-stretch">
                 <PricingCard color='blue' location='Boracay' promo='basic' price={1299} deals={['Choose ANY 1 from the tour packages (tour guide included)', 'Free Hotel Reservation for 5 days', 'Round trip flight accomodation']} />

@@ -89,7 +89,7 @@ function Bohol() {
     <>
     <Header headerBg={heroPic} smallTitle='travel' bigTitle='to bohol' btnColor='brown' btnRedirect='purchase-section' description={`The beauty of Bohol is that it is a place where people are still gentle and kind. It's a place where you can still find true Filipino hospitality and warmth. Visit Bohol and explore the wonders of this island for yourself!`} />
 
-    <div className="mt-10">
+    <div className="mt-10 mx-auto max-w-6xl">
       <Slider {...settings}>
         {!loading && (
           comments.map((commentItem)=>(
@@ -138,7 +138,7 @@ function Bohol() {
       <section id="purchase-section" className="mt-20">
         <PurchaseHeader bgImg={purchaseHeader} />
 
-        <div className="relative px-5 py-20 md:px-20">
+        <div className="relative px-5 mx-auto py-20 max-w-fit md:px-20">
           <div className="flex flex-col space-y-10 xl:flex-row xl:space-x-10 xl:space-y-0">
             <div className="flex flex-1 items-stretch">
               <PricingCard color='brown' location='Bohol' promo='basic' price={699} deals={['Choose ANY 1 from the tour packages (tour guide included)', 'Free Hotel Reservation for 5 days', 'Round trip flight accomodation']} />

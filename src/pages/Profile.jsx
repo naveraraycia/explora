@@ -101,7 +101,7 @@ function Profile() {
     </section>
 
     <footer className='bg-blueGreen mt-20'>
-      <div className='flex flex-col py-10 px-5  space-y-4 items-center justify-end md:justify-between md:items-end md:flex-row md:p-20 md:py-10'>
+      <div className='flex flex-col py-10 max-w-6xl mx-auto px-5 space-y-4 items-center justify-end md:justify-between md:items-end md:flex-row md:py-10'>
         <div className="flex space-x-4">
           <a href='https://www.facebook.com/' target={'_blank'} rel='noreferrer'>
             <FaFacebookSquare className='text-4xl md:text-5xl text-white hover:text-darkBlueGreen' />

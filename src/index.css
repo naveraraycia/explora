@@ -136,7 +136,6 @@ code {
 .slick-slide {
   display: flex !important;
   height: auto !important;
-  width: fit-content !important;
 }
 
 .slick-track {
