@@ -85,7 +85,7 @@ function Palawan() {
   return (
     <>
     <Header headerBg={heroPic} smallTitle='travel' bigTitle='to palawan' btnColor='teal' btnRedirect='purchase-section' description={`What is your idea of a perfect holiday? If it includes sun, sand, and the sound of waves crashing on the shore, then Palawan might just be your next destination. Visit the province and witness the natural wonders of this beautiful island. ⁣⁣`} />
-    <div className="mt-10">
+    <div className="mt-10 mx-auto max-w-6xl">
       <Slider {...settings}>
         {!loading && (
           comments.map((commentItem)=>(
